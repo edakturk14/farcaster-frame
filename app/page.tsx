@@ -5,34 +5,27 @@ import { NEXT_PUBLIC_URL } from './config';
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: 'Story time!',
+      label: 'Pick random follower!',
+      action: 'post_redirect',
     },
     {
       action: 'link',
       label: 'Link to Google',
       target: 'https://www.google.com',
-    },
-    {
-      label: 'Redirect to pictures',
-      action: 'post_redirect',
-    },
+    }
   ],
   image: {
     src: `${NEXT_PUBLIC_URL}/park-3.png`,
-    aspectRatio: '1:1',
-  },
-  input: {
-    text: 'Tell me a boat story',
   },
   postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
 });
 
 export const metadata: Metadata = {
-  title: 'zizzamia.xyz',
-  description: 'LFG',
+  title: 'Frames tutorial',
+  description: 'Fun time building with Frames',
   openGraph: {
-    title: 'zizzamia.xyz',
-    description: 'LFG',
+    title: 'Frames tutorial',
+    description: 'Fun time building with Frames',
     images: [`${NEXT_PUBLIC_URL}/park-1.png`],
   },
   other: {
@@ -43,7 +36,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1>zizzamia.xyz</h1>
+      <h1>Welcome to my frames playground!</h1>
     </>
   );
 }
